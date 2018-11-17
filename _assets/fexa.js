@@ -13,7 +13,8 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
 
     //生成内容导航
     function generateSectionNavigator(){
-        $(".page-inner .markdown-section").find("h1,h2,h3").each(function(){
+        var anchorSelector = gitbook.state.config.pluginsConfig["theme-fexa"]["anchor-selector"] || "h1,h2,h3"
+        $(".page-inner .markdown-section").find(anchorSelector).each(function(){
             var cls="anchor-h1";
             if($(this).is("h2")){
                 cls="anchor-h2";
@@ -53,8 +54,9 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
         //搜索框
         var $search = $('#book-search-input');
         var placeholder = gitbook.state.config.pluginsConfig["theme-fexa"]["search-placeholder"] || "输入关键字搜索"
+        var searchBtn = gitbook.state.config.pluginsConfig["theme-fexa"]["search-btn"] || "搜索"
         $search.find("input").attr("placeholder",placeholder);
-        $search.append("<span id='searchBtn'>搜索</span>");
+        $search.append("<span id='searchBtn'>"+ searchBtn +"</span>");
         $search.focus();
         $("#searchBtn").click(function(e){});
 
