@@ -67,6 +67,7 @@ body {
 }
 
 .page-inner {
+  max-width: 1080px;
   padding: 20px 270px 40px 40px;
 }
 
@@ -175,7 +176,7 @@ body {
     top: 101px;
   }
   .page-inner {
-    max-width: 980px;
+    max-width: 100%;
   }
   .header-inner #book-search-input {
     clear: both;
