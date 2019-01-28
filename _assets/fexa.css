@@ -171,23 +171,29 @@ body {
 }
 
 @media (max-width: 768px) {
-  .book-summary,
-  .book-body {
-    top: 101px;
+  .header-inner .title {
+    display: none;
   }
   .page-inner {
     max-width: 100%;
+    padding: 20px;
+  }
+  .header-inner {
+    padding: 10px;
   }
   .header-inner #book-search-input {
-    clear: both;
-    width: 100%;
+    /* clear: both; */
+    width: 80%;
+  }
+  .book-anchor {
+    display: none;
   }
 }
 /*Book inner page end*/
 
 /* Book  anchor*/
 .book-anchor {
-  width: 180px;
+  width: 220px;
   position: absolute;
   top: 130px;
   right: 30px;
@@ -196,6 +202,7 @@ body {
   user-select: none;
   border-left: 2px solid #ececec;
 }
+
 .book-anchor-title {
   line-height: 38px;
   font-weight: 400;
