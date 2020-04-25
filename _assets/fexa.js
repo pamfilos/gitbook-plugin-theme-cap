@@ -11,7 +11,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
         }
     }
 
-    //生成内容导航
+    //
     function generateSectionNavigator(){
         var anchorSelector = gitbook.state.config.pluginsConfig["theme-fexa"]["anchor-selector"] || "h1,h2,h3"
         $(".page-inner .markdown-section").find(anchorSelector).each(function(){
@@ -28,7 +28,11 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
         });
 
         $(".book-anchor-title").click(function () {
-            // $(".book-anchor-body").toggle();
+            $(".book-anchor-body").toggle();
+        });
+
+        $(".book-header .pull-left").click(function () {
+            $(".book-summary").toggle();
         });
 
         $(".book-anchor-body>a").click(function(){
@@ -36,7 +40,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             $(this).addClass("selected");
         });
 
-        //获取hash值定向到指定位置
+        //
         var hash = decodeURIComponent(location.hash);
         if(hash){
             hash = hash.substring(1);
@@ -45,24 +49,24 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
         
     }
 
-    //基础设置
+    //
     function setBase(){
-        //标题
+        //
         var $title = $(".header-inner .title");
         $title.text(gitbook.state.config.title);
 
-        //搜索框
+        //
         var $search = $('#book-search-input');
-        var placeholder = gitbook.state.config.pluginsConfig["theme-fexa"]["search-placeholder"] || "输入关键字搜索"
-        var searchBtn = gitbook.state.config.pluginsConfig["theme-fexa"]["search-btn"] || "搜索"
+        var placeholder = gitbook.state.config.pluginsConfig["theme-fexa"]["search-placeholder"] || "Search in documentation"
+        var searchBtn = gitbook.state.config.pluginsConfig["theme-fexa"]["search-btn"] || "Search"
         $search.find("input").attr("placeholder",placeholder);
-        $search.append("<span id='searchBtn'>"+ searchBtn +"</span>");
+        $search.prepend("<span id='searchBtn'><i class='fa fa-search'></i></span>");
         $search.focus();
-        $("#searchBtn").click(function(e){});
+        // $("#searchBtn").click(function(e){});
 
-        //去掉gitbook-link
+        // //gitbook-link
         $(".summary .gitbook-link").hide();
-        $(".summary .divider").hide();
+        // $(".summary .divider").hide();
     }
 
     gitbook.events.on('start', function() {
