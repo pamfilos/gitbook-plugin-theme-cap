@@ -13,7 +13,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
 
     //
     function generateSectionNavigator(){
-        var anchorSelector = gitbook.state.config.pluginsConfig["theme-fexa"]["anchor-selector"] || "h1,h2,h3"
+        var anchorSelector = gitbook.state.config.pluginsConfig["theme-cap"]["anchor-selector"] || "h1,h2,h3"
         $(".page-inner .markdown-section").find(anchorSelector).each(function(){
             var cls="anchor-h1";
             if($(this).is("h2")){
@@ -57,8 +57,8 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
 
         //
         var $search = $('#book-search-input');
-        var placeholder = gitbook.state.config.pluginsConfig["theme-fexa"]["search-placeholder"] || "Search in documentation"
-        var searchBtn = gitbook.state.config.pluginsConfig["theme-fexa"]["search-btn"] || "Search"
+        var placeholder = gitbook.state.config.pluginsConfig["theme-cap"]["search-placeholder"] || "Search in documentation"
+        var searchBtn = gitbook.state.config.pluginsConfig["theme-cap"]["search-btn"] || "Search"
         $search.find("input").attr("placeholder",placeholder);
         $search.prepend("<span id='searchBtn'><i class='fa fa-search'></i></span>");
         $search.focus();

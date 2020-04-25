@@ -1,27 +1,27 @@
 {
-  "name": "gitbook-plugin-theme-fexa",
+  "name": "gitbook-plugin-theme-cap",
   "author": {
-    "name": "yulongsheng"
+    "name": "cernanalyispreservation"
   },
   "bugs": {
-    "url": "https://github.com/tonyyls/gitbook-plugin-theme-fexa/issues"
+    "url": "https://github.com/cernanalyispreservation/gitbook-plugin-theme-cap/issues"
   },
   "dependencies": {},
   "description": "Gitbook theme for BingoPaaS docs",
   "engines": {
     "gitbook": ">=3.0.0"
   },
-  "homepage": "https://github.com/tonyyls/gitbook-plugin-theme-fexa#readme",
+  "homepage": "https://github.com/cernanalyispreservation/gitbook-plugin-theme-cap#readme",
   "keywords": [
     "gitbook",
     "theme",
-    "fexa"
+    "cap"
   ],
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tonyyls/gitbook-plugin-theme-fexa.git"
+    "url": "git+https://github.com/cernanalyispreservation/gitbook-plugin-theme-cap.git"
   },
   "scripts": {},
-  "version": "1.0.5"
+  "version": "1.0.0"
 }

@@ -1,6 +1,6 @@
-# Gitbook theme for BingoPaaS Docs
+# Gitbook theme for CERN Analysis Preservation Docs
 
-![Image](https://github.com/tonyyls/gitbook-plugin-theme-fexa/blob/master/preview.png)
+![Image](https://github.com/cernanalyisispreservation/gitbook-plugin-theme-cap/blob/master/preview.png)
 
 ## Usage
 
@@ -9,10 +9,10 @@ Add the theme to your book's configuration `book.json` or `book.js`:
 ```js
 {
     "plugins": [
-        "theme-fexa"
+        "theme-cap"
     ],
     "variables": {
-        "themeFexa":{
+        "themeCAP":{
             "nav":[
                 {
                     "url":"http://...",
@@ -23,10 +23,10 @@ Add the theme to your book's configuration `book.json` or `book.js`:
         },
     },
     "pluginsConfig": {
-        "theme-fexa":{
-            "search-placeholder":"输入关键字搜索", //搜索框提示信息
-            "logo":"./logo.png", //logo地址
-            "favicon": "./favicon.ico" //ico地址
+        "theme-cap":{
+            "search-placeholder":"Search in the docs",
+            "logo":"./logo.png", //logo
+            "favicon": "./favicon.ico" //ico
         }
     }
 },
@@ -48,7 +48,7 @@ plugins: [
     "copy-code-button",
     "cuav-chapters",
     "heading-anchors",
-    "theme-fexa"
+    "theme-cap"
     //...
 ]
 ```
